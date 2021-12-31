@@ -1,12 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/highlightjs_vs.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+  <title>Siarhei Kuzniatsou</title>
 </head>
+
 <body>
-    TODO
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#languages">Languages</a></li>
+        <li><a href="#code_example">Code example</a></li>
+      </ul>
+    </nav>
+    <div class="left">
+      <figure class="tooltip">
+        <img src="images/photo.jpg" alt="My photo">
+        <figcaption>Source: <a href="https://thispersondoesnotexist.com" target="_blank">https://thispersondoesnotexist.com</a>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="right">
+      <h1>Siarhei Kuzniatsou</h1>
+      <h3>Junior Front-End Developer</h3>
+    </div>
+  </header>
+  <main>
+    <section class="left">
+      <h2 id="contacts">Contacts</h2>
+      <ul class="contacts">
+        <li><img src="images/fontawesome/envelope.svg" alt="Email"> <a href="mailto:7ab901a7933419b5@pm.me">7ab901a7933419b5@pm.me</a></li>
+        <li><img src="images/fontawesome/code-branch.svg" alt="Github"> <a href="https://github.com/7ab901a7933419b5" target="_blank">7ab901a7933419b5</a></li>
+        <li><img src="images/fontawesome/location-dot.svg" alt="Location"> Belarus</li>
+      </ul>
+      <h2 id="projects">Projects</h2>
+      <ul>
+        <li><a href="https://7ab901a7933419b5.github.io/rsschool-cv" target="_blank">This CV page</a></li>
+      </ul>
+      <h2 id="education">Education</h2>
+      <ul>
+        <li><b>December 2021 &mdash; until now:</b><br>Rolling Scopes JS/FE Pre-School</li>
+      </ul>
+      <h2 id="languages">Languages</h2>
+      <ul>
+        <li>Russian: native</li>
+        <li>Belarusian: fluent</li>
+        <li>English: upper-intermediate (B2)</li>
+      </ul>
+    </section>
+    <section class="right">
+      <h2 id="about">About me</h2>
+      <p>Yet another aspiring front-end developer. By switching my career to web engineering, I hope to explore new and exciting opportunities in this field.</p>
+      <p>All usual epithets apply: I'm a passionate problem solver, a good team player, responsible and hard-working, diligent and proactive, etc.</p>
+      <p><em>Please note:</em> Personal details provided here are fictional. Currently I'm not interested in the job openings at EPAM, and therefore not willing to disclose my true identity.</p>
+      <h2 id="skills">Skills</h2>
+      <ul>
+        <li>HTML + CSS</li>
+        <li>JavaScript</li>
+        <li>Git</li>
+      </ul>
+      <h2 id="code_example">Code example</h2>
+      <p>My solution to a <a href="https://www.codewars.com/kata/count-strings-in-objects" target="_blank">Codewars problem</a>:</p>
+      <pre><code class="javascript">
+function strCount(obj) {
+  switch (typeof obj) {
+    case "string": return 1;
+    case "object": return Object.values(obj)
+      .filter(x => x)
+      .map(strCount)
+      .reduce((a, b) => a + b, 0);
+    default: return 0;
+  }
+}
+      </code></pre>
+    </section>
+  </main>
+  <footer>
+    Made by <a href="https://github.com/7ab901a7933419b5" target="_blank">Siarhei Kuzniatsou</a> at <a href="https://rs.school/js/" target="_blank"><img src="images/rs_school_js.svg" alt="RSSchool"></a>, 2022
+  </footer>
+  <script src="scripts/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 </body>
+
 </html>
